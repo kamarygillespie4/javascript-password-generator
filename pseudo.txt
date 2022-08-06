@@ -1,0 +1,46 @@
+When I click generate password, a prompt will show up asking for the amount of characters wanted for the password
+I will enter a value
+If the value is less than 8 or greater than 128, I will recieve an error and be asked to write in a new value
+
+
+
+
+
+
+
+
+
+
+
+  if (capitals == false && littles == false && numbers == false && specialChar == false) {
+        alert("Good");
+    } else {
+        alert("Password must contain one of the following: Capital letters, lowercase letters, numbers, or special characters");
+        writePassword();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function characterAmount{
+        var charAmount = prompt("How many character would you like your password to have?");
+    if (charAmount >= low && charAmount <= high) {
+        console.log(charAmount);
+    } else {
+        alert("Please enter an amount of characters between 8 and 128.");
+
+
+
+
+
+
+based on those options, generate o
