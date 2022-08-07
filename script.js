@@ -8,57 +8,59 @@ var lowerCaseOptions = capitalOptions.map(element => {
 var numberOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ];
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "~", "?"];
 
+
 var generateBtn = document.querySelector("#generate");
 
+
+
 function writePassword() {
-    passwordCriteria();
+    var charAmount = prompt("How many character would you like your password to have?");
+    if (charAmount >= low && charAmount <= high) {
+        console.log(charAmount);
+    } else {
+        alert("Please enter an amount of characters between 8 and 128.");
+        charAmount;
+    }
+    var capitals = confirm("Would you like your password to include any capital letters?");
+    console.log(capitals);
 
-    function passwordCriteria() {
+    var littles = confirm("Would you like your password to include any lowercase letters?");
+    console.log(littles);
 
+    var numbers = confirm("Would you like your password to include any numbers?");
+    console.log(numbers);
 
-        function getCharacterAmount() {
-            var charAmount = prompt("How many character would you like your password to have?");
-            if (charAmount >= low && charAmount <= high) {
-                console.log(charAmount);
-            } else {
-                alert("Please enter an amount of characters between 8 and 128.");
-                getCharacterAmount();
-            }
-        }
-        getCharacterAmount();
+    var special = confirm("Would you like your password to include any special characters?");
+    console.log(special);
 
-        function confirmStatements() {
-            var capitals = confirm("Would you like your password to include any capital letters?");
-            console.log(capitals);
-            var littles = confirm("Would you like your password to include any lowercase letters?");
-            console.log(littles);
-            var numbers = confirm("Would you like your password to include any numbers?");
-            console.log(numbers);
-            var special = confirm("Would you like your password to include any special characters?");
-            console.log(special);
-            if (!capitals && !littles && !numbers && !special) {
-                alert("Password must contain");
-                confirmStatements();
-            }
-        }
-        confirmStatements();
+    if (!capitals && !littles && !numbers && !special) {
+        alert("Password must contain at least one of the following: Capital letters, Lowercase letters, Numbers, or Special characters.");
+        capitals;
+        littles;
+        numbers;
+        special;
+
     }
 
 }
 
-// add generate password function, based on responses to confirms -- if true include  -- push into new array 
 
-// function generatePassword() {
-//     var passwordArray
-//     if (capitals) {
+//Need to be able to access the value stored in each variable inside of this function
 
-//     }
-// }
+
+
+function generatePassword() {
+
+
+}
+//add generate password function, based on responses to confirms -- if true include  -- push into new array 
+
+// generatePassword();
 
 // var password = generatePassword();
-// var passwordText = document.querySelector("#password");
+var passwordText = document.querySelector("#password");
 
-// passwordText.value = password;
+passwordText.value = password;
 
 
 

@@ -44,3 +44,12 @@ function characterAmount{
 
 
 based on those options, generate o
+
+
+
+
+    var passwordArray = [];
+    if (capitals) {
+        capitalOptions.push(passwordArray);
+        console.log(passwordArray);
+    }
